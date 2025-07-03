@@ -1,0 +1,44 @@
+package Views;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.io.IOException;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import Modeles.User;
+import javax.swing.JLabel;
+
+public class TabbedPaneViews extends JPanel {
+
+	
+	private static final long serialVersionUID = 1L;
+
+	public TabbedPaneViews(User user) throws IOException {
+
+		setLayout(new BorderLayout());
+        setBackground(new Color(200, 221, 242));EmpruntTabbedPaneViews
+        JTabbedPane tabbedPane = new JTabbedPane();
+        tabbedPane.setBackground(new Color(200, 221, 242));
+
+        UserTabbedPaneViews UserTabbedPaneViews1 = new UserTabbedPaneViews();
+        tabbedPane.addTab("Users", UserTabbedPaneViews1);
+        BookTabbedPaneViews BookTabbedPaneViews1 = new BookTabbedPaneViews();
+        tabbedPane.addTab("Books", BookTabbedPaneViews1);
+        ClientTabbedPaneViews ClientTabbedPaneViews1 =new ClientTabbedPaneViews();
+        tabbedPane.addTab("Clients", ClientTabbedPaneViews1);
+        EmpruntTabbedPaneViews EmpruntTabbedPaneViews1=new EmpruntTabbedPaneViews();
+        tabbedPane.addTab("Loans", EmpruntTabbedPaneViews1);
+        
+        tabbedPane.addTab("Return", createTabPanel("Content for Tab 4"));
+        tabbedPane.addTab("Reports", createTabPanel("Content for Tab 5"));
+
+        add(tabbedPane, BorderLayout.CENTER);
+    }
+
+    private JPanel createTabPanel(String content) {
+        JPanel panel = new JPanel();
+        panel.setBackground(new Color(60, 63, 65));  // Set background color
+        panel.add(new JLabel(content));  // Add content label to the panel
+        return panel;
+    }
+}

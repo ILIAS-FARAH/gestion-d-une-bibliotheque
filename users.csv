@@ -1,0 +1,13 @@
+id,name,cin,email,password,salary,job,admin
+1,John Doe,AB12345,john@example.com,12345,50000,Engineer,1
+7788,khalil ghouddan,CIN7890,alice@example.com,securePass,7377777,Designer,0
+61,John Doe,AB12345,john@example.com,12345,50000,Engineer,1
+81,obyuyu Doe,AB12345,john@example.com,12345,50000,Engineer,1
+551,khalil ghouddan,AB12345,john@example.com,12345,50000,Engineer,1
+5,Alice Johnson,CIN7890,alice@example.com,securePass,75000,Designer,0
+777,Alice Johnson,k5,alice@example.com,55,75000,dsvsdv,0
+7788,khalil ghouddan,CIN7890,alice@example.com,securePass,75000,Designer,0
+7793,dvdv,sdvbfs,sfbsfbfs,sfbsfbfs,6445,dvsdv,1
+7794,houda,k6,sdvdsvsdvsdv,55,54,jduv,1
+7795,houda,sv,sfvfsv,fsvfs,7832,dfvdfv,0
+7796,dvsdv,sdvsdv,sdvsdv,7837xc,837,dvsdv,1

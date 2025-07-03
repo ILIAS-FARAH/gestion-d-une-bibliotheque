@@ -1,0 +1,53 @@
+package App;
+
+import java.io.IOException;
+import java.util.List;
+
+import Controllers.*;
+import Modeles.*;
+import Views.*;
+
+public class Application {
+
+	    public static void main(String[] args) {
+	    	try {
+	    		
+	    		 UserControllerWriter writer = new UserControllerWriter();
+	    	        UserControllerReader reader = new UserControllerReader();
+
+	    	        // Add a new user
+	    	        User newUser = new User(7788, "khalil ghouddan", "CIN7890", "alice@example.com", "securePass", 75000, "Designer", 0);
+	    	        writer.addUser(newUser);
+	    	        System.out.println("User added successfully!");
+	    	        writer.editUser(51, newUser);
+
+	    	        // Read the last user
+	    	        User lastUser = reader.readLastUser();
+	    	        writer.deleteUser(6);
+	    	        System.out.println("Last user in the file: " + lastUser);
+	    	        
+	            
+	            // Read all users
+	            List<User> users = reader.readAllUsers();
+	            users.forEach(System.out::println);
+
+	            // Find a user by ID
+	            User userById = reader.findUserById(1);
+	            System.out.println("User with ID 1: " + userById);
+
+	            // Find a user by name
+	            User userByName = reader.findUserByName("khalil ghouddan");
+	            System.out.println("User with name Jane Smith: " + userByName);
+
+	            // Read the last user
+	            User lastUser1 = reader.readLastUser();
+	            System.out.println("Last user: " + lastUser1);
+	            //LoginView c=new LoginView();
+
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	}
+
+
